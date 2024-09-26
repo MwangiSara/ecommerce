@@ -1,0 +1,13 @@
+Django==5.0.7
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+python-decouple==3.8
+django-phonenumber-field==8.0.0
+requests==2.32.3
+requests-oauthlib==2.0.0
+requests-toolbelt==1.0.0
+africastalking==1.2.8
+setuptools==71.0.1
+djoser==2.2.3
+django-cors-headers==4.4.0
+phonenumbers==8.13.46
