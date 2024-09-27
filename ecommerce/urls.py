@@ -34,7 +34,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title=config("API_TITLE"),
         default_version=config("API_VERSION"),
-        description="APIs for Ordering Application",
+        description="APIs for Customer and Ordering",
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),# No authentication is required

@@ -11,3 +11,4 @@ setuptools==71.0.1
 djoser==2.2.3
 django-cors-headers==4.4.0
 phonenumbers==8.13.46
+coverage==7.6.1
