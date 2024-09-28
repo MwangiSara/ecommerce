@@ -1,5 +1,6 @@
+![APIs](image.png)
 # Description
-- a Django Rest Framework (DRF) project for managing customers and orders. The project is designed for simple understanding and extension, with an emphasis on creating RESTFUL APIs, Implementation of data structures, Implementation authentication and authorization via OpenID Connect, writing automated tests at all levels (unit, integration, and acceptance), and integrating CI/CD.
+- a Django Rest Framework (DRF) project for managing customers and orders. The project is designed for simple understanding and extension, with an emphasis on creating RESTFUL APIs, Implementation of data structures, Implementation authentication and authorization, writing automated tests at all levels (unit, integration, and acceptance), and integrating CI/CD.
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
@@ -22,56 +23,64 @@
 - [Contact](#contact)
 
 ## Project Overview
-- A simple Django project that inputs/uploads customers and orders using REST API. Requires users to login or signup using their Google accounts (with the help of Openid Connect). Africastalking sms gateway is implemented to add sms functionality.
+- A simple Django project that inputs/uploads customers, products and orders using REST API. Requires users to authenticate themselves using JWT. Africastalking sms gateway is implemented to add sms functionality.
 ## Features
 
-- User authentication with OpenID Connect
+- User authentication
 - Customer management
+- product management
 - Order processing and management
-- Responsive design
-- Admin panel for managing users, products, and orders
+- Swagger API UI
+- Admin panel for managing groups
 
 ## Technologies Used
 
 - Django
 - Djngorestframework
-- MySQL
-- mozilla-django-oidc
-- HTML, CSS, JavaScript
-- Bootstrap
-- FontAwesome
+- Postgresql
+- drf-yasg
+- JWT
 - Africastalking
 - coverage
-- Docker
+- Terraform
+- AWS
+
 ## Getting Started
 
 ### Prerequisites
 
 - Python 3.x
 - Django 4.x
-- MySQL
+- Postgresql
 - djangorestframework
-- mozilla-django-oidc
-- python-dotenv
-- mysqlclient
 - africastalking
 - coverage
+- Terraform
+- AWS
+- JWT
 
 ### Installation
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/super_store.git```
+   https://github.com/MwangiSara/ecommerce.git```
 2. Install Dependencies
 ``` pip install -r requirements.txt ```
-3. Run the Project
+3. make sure you have postgresql
+4. Run the Project
 ```python manage.py migrate```
 ```python manage.py runserver```
+5. On Your browser enter ```127.0.0.1:8000/developer/docs```
 ## API Endpoints
-- GET [api/order](http://127.0.0.1:8000/order/) - List all orders
-- POST [api/order](http://127.0.0.1:8000/order/)- Create a new orders
-- GET [api/customer](http://127.0.0.1:8000/customer/) - List all customers
-- POST [api/customer](http://127.0.0.1:8000/customer/)- Create a new customers
+- POST [http://127.0.0.1:8000/api/account/create/customer/](http://127.0.0.1:8000/api/account/create/customer/) - register as a customer
+- POST [http://127.0.0.1:8000/auth/jwt/create/](http://127.0.0.1:8000/auth/jwt/create/)- Get access token
+- POST [http://127.0.0.1:8000/auth/jwt/verify/](http://127.0.0.1:8000/auth/jwt/verify/) - verify access token
+- POST [http://127.0.0.1:8000/api/order/products/](http://127.0.0.1:8000/api/order/products/)- Create an Item
+- POST [http://127.0.0.1:8000/api/order/orders/](http://127.0.0.1:8000/api/order/orders/)- Create an order
+- GET [http://127.0.0.1:8000/api/order/orders/detail](http://127.0.0.1:8000/api/order/orders/detail)- get order details
+- GET [http://127.0.0.1:8000/api/order/search/](http://127.0.0.1:8000/api/order/search/)- search order with date
+## Database
+![database](image-2.png)
 ## Unit Testing
 Here are some tests for this project and the steps
 ### Running test
@@ -86,6 +95,7 @@ To identify which parts of the code are not tested, thereby revealing untested a
 - run test using coverage ```coverage run manage.py test```
 - get report ```coverage report``
 - Generate report in HTML ```coverage html```
+![coverage](image-1.png)
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with any improvements or new features. Here are the Steps
   1. Fork the repository
