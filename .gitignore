@@ -1,25 +1,25 @@
-.env
+# .env
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+# # Unit test / coverage reports
+# htmlcov/
+# .tox/
+# .coverage
+# .coverage.*
+# .cache
+# nosetests.xml
+# coverage.xml
+# *.cover
+# .hypothesis/
+# .pytest_cache/
 
 
-# Local .terraform directories
-**/.terraform/*
+# # Local .terraform directories
+# **/.terraform/*
 
-__pycache__
-.DS_Store
-*.sqlite3
-env
+# __pycache__
+# .DS_Store
+# *.sqlite3
+# env
 
 # Ignore CLI configuration files
 .terraformrc
