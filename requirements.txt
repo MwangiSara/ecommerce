@@ -16,3 +16,4 @@ whitenoise==6.7.0
 jwcrypto==1.5.6
 oauthlib==3.2.2
 drf-yasg==1.21.7
+backports.tarfile==0.1.0
