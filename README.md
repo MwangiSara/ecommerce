@@ -235,6 +235,7 @@ WantedBy=multi-user.target
 ```
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
+gunicorn --bind 127.0.0.1:8000 ecommerce.wsgi:application --log-file gunicorn.log
 ```
 
 ## Unit Testing
